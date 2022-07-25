@@ -1,1215 +1,1015 @@
-
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="en">
+<html class="no-js" lang="zxx">
 <head>
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Shadowsocks,Tutorial," />
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="之前翻墙的方式比较2——用ShadowSocks GUI做代理客户端，然后将Network Manager设置为Proxy模式，通过手动切换ShadowSocks GUI的代理模式来决定是否使用代理。这样配置起来很方便，但说实话，用起来还是挺难受的。主要有这么几点原因：  暑期实习让我养成了禁用Network Manager的习惯，直接配置/etc/network/interfaces或/etc/">
-<meta name="keywords" content="Shadowsocks,Tutorial">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Linux&#x2F;Mac命令行翻墙">
-<meta property="og:url" content="https://ihac.xyz/2018/07/01/Linux-Mac命令行翻墙/index.html">
-<meta property="og:site_name" content="Coding">
-<meta property="og:description" content="之前翻墙的方式比较2——用ShadowSocks GUI做代理客户端，然后将Network Manager设置为Proxy模式，通过手动切换ShadowSocks GUI的代理模式来决定是否使用代理。这样配置起来很方便，但说实话，用起来还是挺难受的。主要有这么几点原因：  暑期实习让我养成了禁用Network Manager的习惯，直接配置/etc/network/interfaces或/etc/">
-<meta property="og:locale" content="en">
-<meta property="og:image" content="https://ihac.xyz/contents/images/shadowsocks-privoxy.png">
-<meta property="og:image" content="https://ihac.xyz/contents/images/proxy.png">
-<meta property="og:image" content="https://ihac.xyz/contents/images/auto-switch.png">
-<meta property="og:image" content="https://ihac.xyz/contents/images/add-condition.png">
-<meta property="og:updated_time" content="2018-07-02T02:09:27.143Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux&#x2F;Mac命令行翻墙">
-<meta name="twitter:description" content="之前翻墙的方式比较2——用ShadowSocks GUI做代理客户端，然后将Network Manager设置为Proxy模式，通过手动切换ShadowSocks GUI的代理模式来决定是否使用代理。这样配置起来很方便，但说实话，用起来还是挺难受的。主要有这么几点原因：  暑期实习让我养成了禁用Network Manager的习惯，直接配置/etc/network/interfaces或/etc/">
-<meta name="twitter:image" content="https://ihac.xyz/contents/images/shadowsocks-privoxy.png">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="https://ihac.xyz/2018/07/01/Linux-Mac命令行翻墙/"/>
-
-
-
-
-
-  <title>Linux/Mac命令行翻墙 | Coding</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-  
-
-
-
-
-
-
-
-
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Craft - Startup Landing Page Template.</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="stylesheet" href="static/css/bootstrap.min.css">
+<link rel="stylesheet" href="static/css/LineIcons.3.0.css">
+<link rel="stylesheet" href="static/css/animate.css">
+<link rel="stylesheet" href="static/css/tiny-slider.css">
+<link rel="stylesheet" href="static/css/glightbox.min.css">
+<link rel="stylesheet" href="static/css/main.css">
 </head>
+<body>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
-  
-  
-    
-  
-
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Coding</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle">Thoughts, stories and ideas</p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
+<div class="preloader">
+<div class="preloader-inner">
+<div class="preloader-icon">
+<span></span>
+<span></span>
 </div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            About
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            Tags
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            Categories
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
-
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            Search
-          </a>
-        </li>
-      
-    </ul>
-  
-
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="Searching..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
+</div>
 </div>
 
 
+<header class="header navbar-area">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-12">
+<div class="nav-inner">
 
-    </div>
-  
+<nav class="navbar navbar-expand-lg">
+<a class="navbar-brand" href="">
+
+</a>
+<button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="toggler-icon"></span>
+<span class="toggler-icon"></span>
+<span class="toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+<ul id="nav" class="navbar-nav ms-auto">
+<li class="nav-item">
+<a href="" class="active" aria-label="Toggle navigation">Home</a>
+</li>
+<li class="nav-item">
+<a href="about-us.html" aria-label="Toggle navigation">About</a>
+</li>
+<li class="nav-item">
+<a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-1" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Pages</a>
+<ul class="sub-menu collapse" id="submenu-1-1">
+<li class="nav-item"><a href="about-us.html">About Us</a></li>
+<li class="nav-item"><a href="pricing.html">Our Pricing</a></li>
+<li class="nav-item"><a href="signin.html">Sign In</a></li>
+<li class="nav-item"><a href="signup.html">Sign Up</a></li>
+ <li class="nav-item"><a href="reset-password.html">Reset Password</a>
+<li class="nav-item"><a href="mail-success.html">Mail Success</a></li>
+<li class="nav-item"><a href="404.html">404 Error</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Blog</a>
+<ul class="sub-menu collapse" id="submenu-1-2">
+<li class="nav-item"><a href="blog-grid.html">Blog Grid</a>
+</li>
+<li class="nav-item"><a href="blog-single.html">Blog Single</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="contact.html" aria-label="Toggle navigation">Contact</a>
+</li>
+</ul>
+</div> 
+<div class="button">
+<a href="signup.html" class="btn">Get started</a>
+</div>
 </nav>
 
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ihac.xyz/2018/07/01/Linux-Mac命令行翻墙/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Xiao An">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Coding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">Linux/Mac命令行翻墙</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-01T23:45:30+08:00">
-                2018-07-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>之前翻墙的方式比较2——用<code>ShadowSocks GUI</code>做代理客户端，然后将<code>Network Manager</code>设置为<code>Proxy</code>模式，通过手动切换<code>ShadowSocks GUI</code>的代理模式来决定是否使用代理。这样配置起来很方便，但说实话，用起来还是挺难受的。主要有这么几点原因：</p>
-<ol>
-<li>暑期实习让我养成了禁用<code>Network Manager</code>的习惯，直接配置<code>/etc/network/interfaces</code>或<code>/etc/sysconfig/network-scripts/ifcfg-xxx</code>更加直观方便。</li>
-<li>每次切换代理模式都要先打开<code>ShadowSocks GUI</code>的设置页面，然后点击选择想要的模式，这样一来还是挺麻烦的，并且会干扰工作状态。</li>
-<li><code>PAC</code>名单的设置非常麻烦，需要自己打开文本，然后手动添加一行规则。试想，一个网站页面打开失败，可能是因为获取脚本没有回应，这时候你需要找到所有失败的请求，将对应的host添加到名单中，这无疑是一个超级麻烦的工作。</li>
-<li>最关键的是，这种翻墙方式只能在桌面环境下使用。桌面环境对服务器来说只是浪费资源，而且远程shell也无法操作桌面。最直观的例子就是，aliyun主机无法使用这种方式翻墙。</li>
-</ol>
-<p>综合以上几点原因，我决定还是花点时间，重新配置一下翻墙方式。网上查询一些资料后，个人感觉<code>ShadowSocks</code>+<code>Privoxy</code>+<code>SwichyOmega</code>最适合我：兼容shell翻墙，不依赖于桌面环境，而且操作简单，唯一的缺点就是配置起来稍微麻烦一点。试用了一段时间，感觉确实不错，于是一口气在我所有的机器（<code>CentOS 7.2</code>, <code>Linux Mint 17.2</code>, <code>Mac OS 10.11.6</code>, <code>Debian 8.6</code>）上配置了代理。</p>
-<p>网上有好几篇文章介绍这种翻墙方式的配置（关键词搜索<code>命令行翻墙</code>、<code>Privoxy</code>即可），我也是参照它们的步骤来实现的。但是感觉它们都不是很完善，因为我在配置的时候还是遇到了不少问题。因此，我还是决定将自己的配置过程贴出来，如果有需求的人正好翻到了我这篇博文，也算是做了一点小贡献；另外，自己以后配置新机器也会更加方便。</p>
-<hr>
-<h2 id="配置ShadowSocks"><a href="#配置ShadowSocks" class="headerlink" title="配置ShadowSocks"></a>配置ShadowSocks</h2><p><code>ShadowSocks</code>分为server端与client端，缺一不可。我的server端部署在<code>Bandwagon</code>的vps上，因此，还需要在自己机器上配置client 端。</p>
-<ol>
-<li><p>安装<code>python</code>、<code>pip</code>，这里可以直接从源安装，Mac好像是自带？</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install python-pip <span class="comment"># for Debian</span></span><br><span class="line">sudo yum install python-pip <span class="comment"># for RedHat</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装<code>ShadowSocks</code>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install shadowsocks</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建<code>ShadowSocks</code>启动配置文件<code>/etc/shadowsocks.json</code>：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"server"</span>: <span class="string">"server_ip_addr"</span>,</span><br><span class="line">    <span class="attr">"server_port"</span>: <span class="number">443</span>,</span><br><span class="line">    <span class="attr">"local_address"</span>: <span class="string">"127.0.0.1"</span>,</span><br><span class="line">    <span class="attr">"local_port"</span>: <span class="number">1080</span>,</span><br><span class="line">    <span class="attr">"password"</span>: <span class="string">"server_ss_password"</span>,</span><br><span class="line">    <span class="attr">"method"</span>: <span class="string">"aes-256-cfb"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>各个字段依照server端的配置来填写。</p>
-</li>
-<li><p>从上述配置文件启动client端：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sslocal -c /etc/shadowsocks.json</span><br></pre></td></tr></table></figure>
-<p>此时，<code>ShadowSocks</code>将监听本地的1080端口，将收到请求转发到server端的443端口，从而实现代理的功能。</p>
-</li>
-</ol>
-<p>但这样还不能实现翻墙，因为<code>ShadowSocks</code>使用的是<code>SOCKS5</code>协议，只支持<code>SOCKS5</code>代理，不支持<code>HTTP</code>、<code>HTTPS</code>代理，下面我们继续配置一个可以将<code>SOCKS5</code>代理转换为其他协议代理的工具——<code>Privoxy</code>。</p>
-<h2 id="配置Privoxy"><a href="#配置Privoxy" class="headerlink" title="配置Privoxy"></a>配置Privoxy</h2><ol>
-<li><p>安装<code>Privoxy</code>，这里不同操作系统的安装方式不一样。</p>
-<p>Linux是最方便的，直接从源安装即可：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install privoxy <span class="comment"># for Debian</span></span><br><span class="line">sudo yum install privoxy <span class="comment"># for RedHat</span></span><br></pre></td></tr></table></figure>
-<p>Mac OS可以从官网直接下载安装包（<a href="http://www.privoxy.org/sf-download-mirror/Macintosh%20%28OS%20X%29/3.0.26%20%28stable%29/Privoxy%203.0.26%2064%20bit.pkg" target="_blank" rel="noopener">link</a>）。</p>
-</li>
-<li><p>修改配置文件。</p>
-<p>对于Linux，配置文件的路径一般为<code>/etc/privoxy/config</code>，而Mac OS上路径稍微有些不同，为<code>/usr/local/etc/privoxy/config</code>。如果你找不到配置文件，建议直接全局搜索关键词<code>privoxy</code>+<code>config</code>。</p>
-<p>在配置文件中找到以下两行，进行修改。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment"># 修改为ShadowSocks配置中的local_port</span></span><br><span class="line">forward-socks5   /               127.0.0.1:1080 .</span><br><span class="line">listen-address  localhost:8118</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>启动<code>Privoxy</code>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo privoxy /etc/privoxy/config             <span class="comment"># for Linux</span></span><br><span class="line">sudo /Application/Privoxy/startPrivoxy.sh    <span class="comment"># for Mac OS</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>现在<code>Privoxy</code>已经在后台运行，监听8118端口，将请求转发到1080端口，实现<code>HTTP</code>、<code>HTTPS</code>代理与<code>SOCKS5</code>代理的转换。</p>
-<h2 id="一些零碎的配置"><a href="#一些零碎的配置" class="headerlink" title="一些零碎的配置"></a>一些零碎的配置</h2><p>安装完<code>ShadowSocks</code>与<code>Privoxy</code>后，我们已经可以命令行翻墙了。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sslocal -c /etc/shadowsocks.json 1&gt;/dev/null 2&gt;&amp;1 &amp;     <span class="comment"># 后台运行ShadowSocks Client</span></span><br><span class="line">sudo privoxy /etc/privoxy/config                        <span class="comment"># 开启privoxy服务</span></span><br><span class="line"><span class="comment"># sudo /Application/Privoxy/startPrivoxy.sh for MacOS</span></span><br><span class="line"><span class="built_in">export</span> http_proxy=http://localhost:8118                 <span class="comment"># 设置HTTP代理地址</span></span><br></pre></td></tr></table></figure>
-<p>效果如下图所示：</p>
-<p><img src="/contents/images/shadowsocks-privoxy.png" alt="ss+privoxy"></p>
-<p>可以看到，本机的外网ip发生了变化，这说明代理配置成功，此时也可以试一试<code>wget www.google.com</code>。</p>
-<p>如果我们不想用代理该怎么办呢？很简单，直接把变量<code>http_proxy</code>给注销掉（<code>unset http_proxy</code>）即可。不过，这样的操作不够优雅，用户并不会关心（甚至讨厌）配置细节，他们要的仅仅是<code>开启代理</code>、<code>关闭代理</code>两个操作而已。而且注意到<code>ShadowSocks</code>一直运行在后台，一旦这个shell被关闭，那么<code>ShadowSocks</code>进程也会被杀死，其他shell想用代理时只能重新运行<code>ShadowSocks</code>，这太糟糕了。</p>
-<p>为了解决以上两个问题，我们可以做一下小配置。</p>
-<ol>
-<li><p>使用<code>nohup</code>让<code>ShadowSocks</code>一直运行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup sslocal -c /etc/shadowsocks.json 1&gt;/dev/null 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将所有命令操作封装一下。</p>
-<p>在主目录下新建脚本文件<code>ss.sh</code>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#! /bin/bash</span></span><br><span class="line">nohup sslocal -c /etc/shadowsocks.json &gt;/dev/null 2&gt;&amp;1 &amp;</span><br><span class="line">sudo privoxy /etc/privoxy/config <span class="comment"># only for Linux</span></span><br><span class="line"><span class="comment"># for Mac OS, sudo /Application/Privoxy/startPrivoxy.sh</span></span><br></pre></td></tr></table></figure>
-<p>在当前shell的profile（<code>.bashrc</code>、<code>.zshrc</code>等等，也可以写在<code>/etc/profile</code>）里，实现两个函数，分别用于开启代理与关闭代理：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">sson</span></span>() &#123;</span><br><span class="line">    <span class="built_in">export</span> http_proxy=http://localhost:8118;</span><br><span class="line">    <span class="built_in">export</span> https_proxy=http://localhost:8118;</span><br><span class="line">    <span class="built_in">export</span> ftp_proxy=http://localhost:8118;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">ssoff</span></span>() &#123;</span><br><span class="line">    <span class="built_in">unset</span> http_proxy https_proxy ftp_proxy</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>现在，你可以运行一次脚本<code>ss.sh</code>，以后想用代理时，直接命令行输入命令<code>sson</code>即可，同理，关闭代理使用<code>ssoff</code>。如果你想实现开机自动运行<code>ShadowSocks</code>和<code>Privoxy</code>（即开机运行<code>ss.sh</code>脚本），直接在<code>/etc/rc.local</code>中添加运行<code>ss.sh</code>的命令即可。</p>
-</li>
-</ol>
-<h2 id="配置Chrome"><a href="#配置Chrome" class="headerlink" title="配置Chrome"></a>配置Chrome</h2><p>最后，我还需要为浏览器配置代理，这步就比较简单了，全部鼠标操作。</p>
-<ol>
-<li><p>下载并安装插件<code>SwitchyOmega</code>，由于未翻墙不能访问chrome webstore，建议从github（<a href="https://github.com/FelisCatus/SwitchyOmega/releases/download/v2.3.21/SwitchyOmega.crx" target="_blank" rel="noopener">link</a>）下载，我这里提供<code>2.3.21</code>版本的下载（<a href="http://www.xiaoan.org/share/SwitchyOmega.crx" target="_blank" rel="noopener">link</a>）。</p>
-</li>
-<li><p>进入<code>SwitchyOmega</code>的<code>options</code>（选项）界面，在侧边栏中选择<code>proxy</code>（代理），按照下图填写：</p>
-<p><img src="/contents/images/proxy.png" alt="proxy"></p>
-</li>
-<li><p>在侧边栏中选择<code>auto switch</code>（自动切换），按照下图填写：</p>
-<p><img src="/contents/images/auto-switch.png" alt="auto-switch"></p>
-<p>注意，填写完<code>Rule List URL</code>后，需要点击下方的<code>Download Profile Now</code>下载翻墙名单<code>gfwlist.txt</code>。</p>
-</li>
-<li><p>填写完后，点击<code>Apply changes</code>（确认修改）。</p>
-</li>
-</ol>
-<p>现在可以使用<code>Chrome</code>翻墙啦。将插件设置为<code>auto switch</code>模式，此时，名单<code>gfwlist.list</code>内的所有网址会自动走代理，而不在名单的网址不走代理。</p>
-<p>回顾最开始我提出来的四个问题，现在好像还剩一个没有解决——<code>PAC</code>列表修改起来很麻烦。其实不然，<code>SwitchyOmega</code>为我们提供了一个很优雅的操作方式。一旦有请求失败，<code>SwitchyOmega</code>会将它们记录下来，此时，我们可以为这些失败的请求设置规则：</p>
-<p><img src="/contents/images/add-condition.png" alt="add condition"></p>
-<p>如上所示，直接点击<code>Add condition</code>即可将<code>*.atdmt.com</code>设置为<code>proxy</code>模式，以后每次访问以<code>.atdmt.com</code>结尾的网址时，浏览器都会自动走代理。终于，我们不需要自己手动设置<code>PAC</code>名单啦。</p>
-<hr>
-<p>以上就是我正在使用的，也是自己非常喜欢的一种翻墙方式，有翻墙需求的朋友不妨尝试一下。</p>
-
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Shadowsocks/" rel="tag"># Shadowsocks</a>
-          
-            <a href="/tags/Tutorial/" rel="tag"># Tutorial</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/06/28/Coursera-Parallel-Programming-课程笔记/" rel="next" title="[Coursera] Parallel Programming 课程笔记">
-                <i class="fa fa-chevron-left"></i> [Coursera] Parallel Programming 课程笔记
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/09/Network-Programming-Cheet-Sheet/" rel="prev" title="Network Programming Cheet Sheet">
-                Network Programming Cheet Sheet <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar.png"
-                alt="Xiao An" />
-            
-              <p class="site-author-name" itemprop="name">Xiao An</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">33</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
-                  <span class="site-state-item-name">categories</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">24</span>
-                  <span class="site-state-item-name">tags</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
-          
-
-          
-            <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/ihac" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="https://plus.google.com/u/0/117973548704440941150" target="_blank" title="Google">
-                      
-                        <i class="fa fa-fw fa-google"></i>Google</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="https://stackoverflow.com/users/7708919/hac" target="_blank" title="StackOverflow">
-                      
-                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="https://twitter.com/zjuhac" target="_blank" title="Twitter">
-                      
-                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:hac@zju.edu.cn" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
-            </div>
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置ShadowSocks"><span class="nav-number">1.</span> <span class="nav-text">配置ShadowSocks</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Privoxy"><span class="nav-number">2.</span> <span class="nav-text">配置Privoxy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些零碎的配置"><span class="nav-number">3.</span> <span class="nav-text">一些零碎的配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Chrome"><span class="nav-number">4.</span> <span class="nav-text">配置Chrome</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; 2016 &mdash; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Xiao An</span>
-
-  
+</div>
+</div>
+</div> 
+</div> 
+</header>
+
+
+<section class="hero-area">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-5 col-md-12 col-12">
+<div class="hero-content">
+<h4 class="wow fadeInUp" data-wow-delay=".2s">We Are Creative Digital Agency</h4>
+<h1 class="wow fadeInUp" data-wow-delay=".4s">Strategic Concepts For Businesses.</h1>
+<p class="wow fadeInUp" data-wow-delay=".6s">Invest your spare change in Bitcoin and save
+with<br> crypto to e arn interest in real time.
+</p>
+<div class="button wow fadeInUp" data-wow-delay=".8s">
+<a href="about-us.html" class="btn ">Discover More</a>
+</div>
+</div>
+</div>
+<div class="col-lg-7 col-12">
+<div class="hero-image">
+<img class="main-image" src="static/picture/hero-image.png" alt="#">
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<div class="services section">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<div class="section-title">
+<h3 class="wow zoomIn" data-wow-delay=".2s">What we offer</h3>
+<h2 class="wow fadeInUp" data-wow-delay=".4s">Our Services</h2>
+<p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
+Ipsum available, but the majority have suffered alteration in some form.</p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay=".2s">
+<div class="single-service">
+<div class="main-icon">
+<i class="lni lni-grid-alt"></i>
+</div>
+<h4 class="text-title">Brand Identity Design</h4>
+<p>Invest in Bitcoin on the regular or save with one of the highest interest rates on the
+market.</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay=".4s">
+<div class="single-service">
+<div class="main-icon">
+<i class="lni lni-keyword-research"></i>
+</div>
+<h4 class="text-title">Digital Marketing</h4>
+<p>Invest in Bitcoin on the regular or save with one of the highest interest rates on the
+market.</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay=".6s">
+<div class="single-service">
+<div class="main-icon">
+<i class="lni lni-vector"></i>
+</div>
+<h4 class="text-title">Design and Development</h4>
+<p>Invest in Bitcoin on the regular or save with one of the highest interest rates on the
+market.</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay=".2s">
+<div class="single-service">
+<div class="main-icon">
+<i class="lni lni-book"></i>
+</div>
+<h4 class="text-title">IT Consulting Service</h4>
+<p>Invest in Bitcoin on the regular or save with one of the highest interest rates on the
+market.</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay=".4s">
+<div class="single-service">
+<div class="main-icon">
+<i class="lni lni-cloud-network"></i>
+</div>
+<h4 class="text-title">Cloud Computing</h4>
+<p>Invest in Bitcoin on the regular or save with one of the highest interest rates on the
+market.</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay=".6s">
+<div class="single-service">
+<div class="main-icon">
+<i class="lni lni-display-alt"></i>
+</div>
+<h4 class="text-title">Graphics Design</h4>
+<p>Invest in Bitcoin on the regular or save with one of the highest interest rates on the
+market.</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
+<section class="portfolio-section section">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<div class="section-title">
+<h3 class="wow zoomIn" data-wow-delay=".2s">Case Study</h3>
+<h2 class="wow fadeInUp" data-wow-delay=".4s">Our Latest Works</h2>
+<p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
+Ipsum available, but the majority have suffered alteration in some form.</p>
+</div>
+</div>
+</div>
+<div class="row">
+ <div class="col-12">
+<div class="portfolio-btn-wrapper wow fadeInUp" data-wow-delay=".4s">
+<button class="portfolio-btn active" data-filter="*">All</button>
+<button class="portfolio-btn" data-filter=".branding">Branding</button>
+<button class="portfolio-btn" data-filter=".marketing">Marketing</button>
+<button class="portfolio-btn" data-filter=".web">Web Design</button>
+<button class="portfolio-btn" data-filter=".graphic">Graphic Design</button>
+</div>
+</div>
+</div>
+<div class="row grid">
+<div class="col-lg-4 col-md-6 grid-item branding marketing">
+<div class="portfolio-item-wrapper">
+<div class="portfolio-img">
+<img src="static/picture/pf-1.jpg" alt="">
+</div>
+<div class="portfolio-overlay">
+<div class="overlay-content">
+<span>Branding</span>
+<h4>Product Branding</h4>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 grid-item marketing graphic">
+<div class="portfolio-item-wrapper">
+<div class="portfolio-img">
+<img src="static/picture/pf-2.jpg" alt="">
+</div>
+<div class="portfolio-overlay">
+<div class="overlay-content">
+<span>Graphics Design</span>
+<h4>Packaging Design</h4>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 grid-item branding">
+<div class="portfolio-item-wrapper">
+<div class="portfolio-img">
+<img src="static/picture/pf-3.jpg" alt="">
+</div>
+<div class="portfolio-overlay">
+<div class="overlay-content">
+<span>Branding</span>
+<h4>Product Branding</h4>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 grid-item web">
+<div class="portfolio-item-wrapper">
+<div class="portfolio-img">
+<img src="static/picture/pf-4.jpg" alt="">
+</div>
+<div class="portfolio-overlay">
+<div class="overlay-content">
+<span>Web Development</span>
+<h4>Beauty Care Web Apps</h4>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 grid-item graphic">
+<div class="portfolio-item-wrapper">
+<div class="portfolio-img">
+<img src="static/picture/pf-5.jpg" alt="">
+</div>
+<div class="portfolio-overlay">
+<div class="overlay-content">
+<span>Graphics Design</span>
+<h4>Mocup Design</h4>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 grid-item web">
+<div class="portfolio-item-wrapper">
+ <div class="portfolio-img">
+<img src="static/picture/pf-6.jpg" alt="">
+</div>
+<div class="portfolio-overlay">
+<div class="overlay-content">
+<span>App Development</span>
+<h4>Mobile Apps Design</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="intro-video-area section">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<div class="inner-content-head">
+<div class="inner-content">
+<img class="shape1" src="static/picture/shape1.svg" alt="#">
+<img class="shape2" src="static/picture/shape2.svg" alt="#">
+<div class="section-title">
+<span class="wow zoomIn" data-wow-delay=".2s">Create your own experience</span>
+<h2 class="wow fadeInUp" data-wow-delay=".4s">Watch Our intro video</h2>
+<p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of
+Lorem
+Ipsum available, but the majority have suffered alteration in some form.</p>
+</div>
+<div class="intro-video-play">
+<div class="play-thumb wow zoomIn" data-wow-delay=".2s">
+<a href="javascript:;" class="glightbox video"><i class="lni lni-play"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="team section">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<div class="section-title">
+<h3 class="wow zoomIn" data-wow-delay=".2s">Expert Team</h3>
+<h2 class="wow fadeInUp" data-wow-delay=".4s">Meet Our Team</h2>
+<p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
+Ipsum available, but the majority have suffered alteration in some form.</p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-3 col-md-6 col-12 wow fadeInUp" data-wow-delay=".3s">
+
+<div class="single-team">
+<div class="team-image">
+<img src="static/picture/team4.jpg" alt="#">
+</div>
+<div class="content">
+<h4>Deco Milan
+<span>Founder</span>
+</h4>
+<ul class="social">
+<li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
+<li><a href="javascript:void(0)"><i class="lni lni-instagram"></i></a></li>
+<li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
+<li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
+ </ul>
+</div>
+</div>
+
+</div>
+<div class="col-lg-3 col-md-6 col-12 wow fadeInUp" data-wow-delay=".5s">
+
+<div class="single-team">
+<div class="team-image">
+<img src="static/picture/team1.jpg" alt="#">
+</div>
+<div class="content">
+<h4>Liza Marko
+<span>Developer</span>
+</h4>
+<ul class="social">
+<li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
+<li><a href="javascript:void(0)"><i class="lni lni-instagram"></i></a></li>
+<li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
+<li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
+</ul>
+</div>
+</div>
+
+</div>
+<div class="col-lg-3 col-md-6 col-12 wow fadeInUp" data-wow-delay=".7s">
+
+<div class="single-team">
+<div class="team-image">
+<img src="static/picture/team2.jpg" alt="#">
+</div>
+<div class="content">
+<h4>John Smith
+<span>Designer</span>
+</h4>
+<ul class="social">
+<li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
+<li><a href="javascript:void(0)"><i class="lni lni-instagram"></i></a></li>
+<li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
+<li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
+</ul>
+</div>
+</div>
+
+</div>
+<div class="col-lg-3 col-md-6 col-12 wow fadeInUp" data-wow-delay=".9s">
+
+<div class="single-team">
+<div class="team-image">
+<img src="static/picture/team3.jpg" alt="#">
+</div>
+<div class="content">
+<h4>Amion Doe
+<span>Co-Founder</span>
+</h4>
+<ul class="social">
+<li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
+<li><a href="javascript:void(0)"><i class="lni lni-instagram"></i></a></li>
+<li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
+<li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="testimonials style2 section">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<div class="section-title">
+<h3 class="wow zoomIn" data-wow-delay=".2s">Customer Reviews</h3>
+<h2 class="wow fadeInUp" data-wow-delay=".4s">Our Testimonials</h2>
+<p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
+Ipsum available, but the majority have suffered alteration in some form.</p>
+</div>
+</div>
+</div>
+<div class="row testimonial-slider">
+<div class="col-lg-6 col-12 ">
+
+<div class="single-testimonial">
+<div class="inner-content">
+<div class="quote-icon">
+<i class="lni lni-quotation"></i>
+</div>
+<div class="text">
+<p>“A vast number of clients decide to create dedicated software is the
+online store. It is nothing but a website with a catalog of products and the
+possibility.”</p>
+</div>
+<div class="author">
+<img src="static/picture/testi-1.png" alt="#">
+<h4 class="name">Somalia D Silva
+<span class="deg">Business Manager</span>
+</h4>
+</div>
+</div>
+</div>
+
+</div>
+<div class="col-lg-6 col-12 ">
+
+<div class="single-testimonial">
+<div class="inner-content">
+<div class="quote-icon">
+<i class="lni lni-quotation"></i>
+</div>
+<div class="text">
+<p>“A vast number of clients decide to create dedicated software is the
+online store. It is nothing but a website with a catalog of products and the
+possibility.”</p>
+</div>
+<div class="author">
+<img src="static/picture/testi-2.png" alt="#">
+<h4 class="name">David Warner
+<span class="deg">Web Developer</span>
+</h4>
+</div>
+</div>
+</div>
+
+</div>
+<div class="col-lg-6 col-12 ">
+
+<div class="single-testimonial">
+<div class="inner-content">
+<div class="quote-icon">
+<i class="lni lni-quotation"></i>
+</div>
+<div class="text">
+<p>“A vast number of clients decide to create dedicated software is the
+online store. It is nothing but a website with a catalog of products and the
+possibility.”</p>
+</div>
+<div class="author">
+<img src="static/picture/testi-3.png" alt="#">
+<h4 class="name">Jems Gilario
+<span class="deg">Graphics Designer</span>
+</h4>
+</div>
+</div>
+</div>
+ 
+</div>
+<div class="col-lg-6 col-12 ">
+
+<div class="single-testimonial">
+<div class="inner-content">
+<div class="quote-icon">
+<i class="lni lni-quotation"></i>
+</div>
+<div class="text">
+<p>“A vast number of clients decide to create dedicated software is the
+online store. It is nothing but a website with a catalog of products and the
+possibility.”</p>
+</div>
+<div class="author">
+<img src="static/picture/testi-2.png" alt="#">
+<h4 class="name">David Warner
+<span class="deg">Web Developer</span>
+</h4>
+</div>
+</div>
+</div>
+
+</div>
+<div class="col-lg-6 col-12 ">
+
+<div class="single-testimonial">
+<div class="inner-content">
+<div class="quote-icon">
+<i class="lni lni-quotation"></i>
+</div>
+<div class="text">
+<p>“A vast number of clients decide to create dedicated software is the
+online store. It is nothing but a website with a catalog of products and the
+possibility.”</p>
+</div>
+<div class="author">
+<img src="static/picture/testi-3.png" alt="#">
+<h4 class="name">Jems Gilario
+<span class="deg">Graphics Designer</span>
+</h4>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="blog-section section">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<div class="section-title">
+<h3 class="wow zoomIn" data-wow-delay=".2s">Blogs</h3>
+<h2 class="wow fadeInUp" data-wow-delay=".4s">Our Latest News</h2>
+<p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
+Ipsum available, but the majority have suffered alteration in some form.</p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay=".4s">
+
+<div class="single-blog-grid">
+<div class="blog-img">
+<a href="blog-single.html">
+<img src="static/picture/blog-1.png" alt="#">
+</a>
+</div>
+<div class="blog-content">
+<div class="meta-info">
+<a class="date" href="javascript:void(0)"><i class="lni lni-timer"></i> 10 June 2023
+</a>
+<a class="author" href="javascript:void(0)"><i class="lni lni-user"></i> Anjelio Joly
+</a>
+</div>
+<h4>
+<a href="blog-single.html">Branding Involves Developing a Strategy to Creating.</a>
+</h4>
+<p>Lorem ipsum dolor sit amet, adipscing elitr, sit gifted sed diam nonumy eirmod tempor
+ividunt dolore.</p>
+<div class="button">
+<a href="blog-single.html" class="btn">Read More</a>
+</div>
+</div>
+</div>
+
+</div>
+<div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay=".6s">
+
+<div class="single-blog-grid">
+<div class="blog-img">
+<a href="blog-single.html">
+<img src="static/picture/blog-2.png" alt="#">
+</a>
+</div>
+<div class="blog-content">
+<div class="meta-info">
+<a class="date" href="javascript:void(0)"><i class="lni lni-timer"></i> 5 Aug 2023
+</a>
+<a class="author" href="javascript:void(0)"><i class="lni lni-user"></i> Kumila ksusi
+</a>
+</div>
+<h4>
+<a href="blog-single.html">Design is a Plan or The Construction of an
+Object.</a>
+</h4>
+<p>Lorem ipsum dolor sit amet, adipscing elitr, sit gifted sed diam nonumy eirmod tempor
+ividunt dolore.</p>
+<div class="button">
+<a href="blog-single.html" class="btn">Read Blog</a>
+</div>
+</div>
+</div>
+
+</div>
+<div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay=".8s">
+
+<div class="single-blog-grid">
+<div class="blog-img">
+<a href="blog-single.html">
+<img src="static/picture/blog-3.png" alt="#">
+</a>
+</div>
+<div class="blog-content">
+<div class="meta-info">
+<a class="date" href="javascript:void(0)"><i class="lni lni-timer"></i> 25 Dec 2023
+</a>
+<a class="author" href="javascript:void(0)"><i class="lni lni-user"></i> Alex Jendro
+</a>
+</div>
+<h4>
+<a href="blog-single.html">The Data-Driven Approach to Understanding.</a>
+</h4>
+<p>Lorem ipsum dolor sit amet, adipscing elitr, sit gifted sed diam nonumy eirmod tempor
+ividunt dolore.</p>
+<div class="button">
+<a href="blog-single.html" class="btn">Read Blog</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="faq section">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<div class="section-title">
+<h3 class="wow zoomIn" data-wow-delay=".2s">Faq</h3>
+<h2 class="wow fadeInUp" data-wow-delay=".4s">frequently asked questions</h2>
+<p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
+Ipsum available, but the majority have
+suffered alteration in some form.</p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-6 col-md-12 col-12">
+<div class="accordion" id="accordionExample">
+<div class="accordion-item">
+<h2 class="accordion-header" id="heading1">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+<span class="title">Can I cancel my subscription at anytime?</span><i class="lni lni-plus"></i>
+</button>
+</h2>
+<div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionExample">
+<div class="accordion-body">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur sit
+amet ante nec vulputate. Nulla aliquam, justo auctor consequat tincidunt, arcu
+erat mattis lorem.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur sit
+amet ante nec vulputate.</p>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="heading2">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+<span class="title">Can I change my plan later on?</span><i class="lni lni-plus"></i>
+</button>
+</h2>
+<div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionExample">
+<div class="accordion-body">
+<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+richardson ad squid. 3 wolf moon officia aute. non cupidatat skateboard dolor
+brunch. Foosd truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+</p>
+<p>
+sunt alqua put a bird on it squid single-origin coffee nulla assumenda
+shoreditch et. Nihil anim ke ffiyeh helvetica, craft beer labore wes anderson
+cred nesciunt sapiente ea proident.</p>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="heading3">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+<span class="title">Will you renew my subscription automatically?</span><i class="lni lni-plus"></i>
+</button>
+</h2>
+<div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample">
+<div class="accordion-body">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas expedita,
+repellendus est nemo cum quibusdam optio, voluptate hic a tempora facere, nihil
+non itaque alias similique quas quam odit consequatur.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 col-12 xs-margin">
+<div class="accordion" id="accordionExample2">
+<div class="accordion-item">
+<h2 class="accordion-header" id="heading11">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+<span class="title">How many sites can I install the widgets of this app
+to?</span><i class="lni lni-plus"></i>
+</button>
+</h2>
+<div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11" data-bs-parent="#accordionExample2">
+<div class="accordion-body">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur sit
+amet ante nec vulputate. Nulla aliquam, justo auctor consequat tincidunt, arcu
+erat mattis lorem.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur sit
+amet ante nec vulputate.</p>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="heading22">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse22" aria-expanded="false" aria-controls="collapse22">
+<span class="title">Do you offer any discounts?</span><i class="lni lni-plus"></i>
+</button>
+</h2>
+<div id="collapse22" class="accordion-collapse collapse" aria-labelledby="heading22" data-bs-parent="#accordionExample2">
+<div class="accordion-body">
+<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+richardson ad squid. 3 wolf moon officia aute. non cupidatat skateboard dolor
+brunch. Foosd truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+</p>
+<p>
+sunt alqua put a bird on it squid single-origin coffee nulla assumenda
+shoreditch et. Nihil anim ke ffiyeh helvetica, craft beer labore wes anderson
+cred nesciunt sapiente ea proident.</p>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="heading33">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse33" aria-expanded="false" aria-controls="collapse33">
+<span class="title">Do I get updates for the app?</span><i class="lni lni-plus"></i>
+</button>
+</h2>
+<div id="collapse33" class="accordion-collapse collapse" aria-labelledby="heading33" data-bs-parent="#accordionExample2">
+<div class="accordion-body">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas expedita,
+repellendus est nemo cum quibusdam optio, voluptate hic a tempora facere, nihil
+non itaque alias similique quas quam odit consequatur.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<div class="client-logo bg-white">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-3 col-md-3 col-12 text-center">
+<div class="single-logo">
+<img src="static/picture/graygrids-logo.svg" alt="#">
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-12 text-center">
+<div class="single-logo">
+<img src="static/picture/lineicons-logo.svg" alt="#">
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-12 text-center">
+<div class="single-logo">
+<img src="static/picture/ayro-logo.svg" alt="#">
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-12 text-center">
+<div class="single-logo">
+<img src="static/picture/uideck-logo.svg" alt="#">
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<section class="call-action">
+<div class="container">
+<div class="inner-content">
+<div class="row align-items-center">
+<div class="col-lg-6 col-md-7 col-12">
+<div class="text">
+<h2>Ready to dive in?
+<br> <span>Start your free trial today.</span>
+</h2>
+</div>
+</div>
+<div class="col-lg-6 col-md-5 col-12">
+<div class="button">
+<a href="pricing.html" class="btn">Get started
+</a>
+<a href="about-us.html" class="btn btn-alt">Learn More
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<footer class="footer section">
+
+<div class="footer-top">
+<div class="container">
+<div class="inner-content">
+<div class="row">
+<div class="col-lg-4 col-md-6 col-12">
+
+<div class="single-footer f-about">
+<div class="logo">
+<a href="">
+<img src="static/picture/white-logo.svg" alt="#">
+</a>
+</div>
+<p>Making the world a better place through constructing elegant hierarchies.</p>
+<h4 class="social-title">Follow Us On:</h4>
+<ul class="social">
+<li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
+<li><a href="javascript:void(0)"><i class="lni lni-instagram"></i></a></li>
+<li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
+<li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
+<li><a href="javascript:void(0)"><i class="lni lni-pinterest"></i></a></li>
+<li><a href="javascript:void(0)"><i class="lni lni-youtube"></i></a></li>
+</ul>
+</div>
+
+</div>
+<div class="col-lg-2 col-md-6 col-12">
+
+<div class="single-footer f-link">
+<h3>Solutions</h3>
+<ul>
+<li><a href="javascript:void(0)">Marketing</a></li>
+<li><a href="javascript:void(0)">Analytics</a></li>
+<li><a href="javascript:void(0)">Commerce</a></li>
+<li><a href="javascript:void(0)">Insights</a></li>
+</ul>
+</div>
+
+</div>
+<div class="col-lg-2 col-md-6 col-12">
+
+<div class="single-footer f-link">
+<h3>Support</h3>
+<ul>
+<li><a href="javascript:void(0)">Pricing</a></li>
+<li><a href="javascript:void(0)">Documentation</a></li>
+<li><a href="javascript:void(0)">Guides</a></li>
+<li><a href="javascript:void(0)">API Status</a></li>
+</ul>
+</div>
+
+</div>
+<div class="col-lg-4 col-md-6 col-12">
+
+<div class="single-footer newsletter">
+<h3>Subscribe</h3>
+<p>Subscribe to our newsletter for the latest updates</p>
+<form action="#" method="get" target="_blank" class="newsletter-form">
+<input name="EMAIL" placeholder="Email address" required="required" type="email">
+<div class="button">
+<button class="sub-btn"><i class="lni lni-envelope"></i>
+</button>
+</div>
+</form>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="copyright-area">
+<div class="container">
+<div class="inner-content">
+<div class="row">
+<div class="col-lg-6 col-md-6 col-12">
+<p class="copyright-text">© 2023 Craft - All Rights Reserved</p>
+</div>
+<div class="col-lg-6 col-md-6 col-12">
+
+</p></div>
+</div>
+</div>
+</div>
+</div>
+
+</footer>
+
+
+<a href="#" class="scroll-top">
+<i class="lni lni-chevron-up"></i>
+</a>
+
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/wow.min.js"></script>
+<script src="static/js/tiny-slider.js"></script>
+<script src="static/js/glightbox.min.js"></script>
+<script src="static/js/count-up.min.js"></script>
+<script src="static/js/imagesloaded.min.js"></script>
+<script src="static/js/isotope.min.js"></script>
+<script src="static/js/main.js"></script>
+<script>
+
+        //========= testimonial 
+        tns({
+            container: '.testimonial-slider',
+            items: 3,
+            slideBy: 'page',
+            autoplay: false,
+            mouseDrag: true,
+            gutter: 0,
+            nav: true,
+            controls: false,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                540: {
+                    items: 1,
+                },
+                768: {
+                    items: 2,
+                },
+                992: {
+                    items: 2,
+                },
+                1170: {
+                    items: 3,
+                }
             }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
+        });
 
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
+        //====== counter up 
+        var cu = new counterUp({
+            start: 0,
+            duration: 2000,
+            intvalues: true,
+            interval: 100,
+            append: " ",
+        });
+        cu.start();
+
+        //========= glightbox
+        GLightbox({
+            'href': '#',
+            'type': 'video',
+            'source': 'youtube', //vimeo, youtube or local
+            'width': 900,
+            'autoplayVideos': true,
+        });
+
+        //============== isotope masonry js with imagesloaded
+        imagesLoaded('#container', function () {
+            var elem = document.querySelector('.grid');
+            var iso = new Isotope(elem, {
+                // options
+                itemSelector: '.grid-item',
+                masonry: {
+                    // use outer width of grid-sizer for columnWidth
+                    columnWidth: '.grid-item'
                 }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
             });
-          }
 
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
+            let filterButtons = document.querySelectorAll('.portfolio-btn-wrapper button');
+            filterButtons.forEach(e =>
+                e.addEventListener('click', () => {
 
-          proceedsearch();
-        }
-      });
-    }
+                    let filterValue = event.target.getAttribute('data-filter');
+                    iso.arrange({
+                        filter: filterValue
+                    });
+                })
+            );
+        });
 
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
     </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-  
-
-
-  
-
-  
-
+	<div style="display:none;"><a href="#">网站模板</a></div>
 </body>
 </html>
